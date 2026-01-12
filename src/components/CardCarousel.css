@@ -9,10 +9,14 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   overflow: visible;
+  align-items: stretch; /* Make all cards same height */
 }
 
 .carousel-card {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill grid cell height */
 }
 
 /* Mobile: Show as swipeable carousel */
@@ -38,6 +42,16 @@
     min-width: 85%;
     scroll-snap-align: center;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  
+  /* Ensure cards have consistent height on mobile */
+  .carousel-card > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 }
 
