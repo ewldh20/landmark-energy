@@ -1,3 +1,10 @@
+/* App Container */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Navigation */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
@@ -446,6 +453,14 @@
     color: white;
     padding: 2rem 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    clear: both;
+    margin-top: auto;
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .footer a {
@@ -498,6 +513,14 @@
     .modal-header,
     .contact-form {
         padding: 1.5rem;
+    }
+    
+    .footer {
+        padding: 1.5rem 0;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: block;
     }
 }
 
