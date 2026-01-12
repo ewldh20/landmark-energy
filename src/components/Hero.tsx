@@ -1,8 +1,8 @@
 interface HeroProps {
-  onContactClick: () => void
+  onContactClick?: () => void
 }
 
-const Hero = ({ onContactClick }: HeroProps) => {
+const Hero = ({ onContactClick: _onContactClick }: HeroProps) => {
   const scrollToContent = () => {
     const element = document.getElementById('about')
     if (element) {
