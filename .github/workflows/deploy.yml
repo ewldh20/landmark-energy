@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://your-backend-url.railway.app/api' }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
