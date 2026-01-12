@@ -1,3 +1,5 @@
+import CardCarousel from './CardCarousel'
+
 const HowItWorks = () => {
   const steps = [
     {
@@ -22,6 +24,14 @@ const HowItWorks = () => {
     }
   ]
 
+  const stepCards = steps.map((step) => (
+    <div key={step.number} className="step">
+      <div className="step-number">{step.number}</div>
+      <h3>{step.title}</h3>
+      <p>{step.description}</p>
+    </div>
+  ))
+
   return (
     <section id="how-it-works" className="section section-alt">
       <div className="container">
@@ -31,15 +41,9 @@ const HowItWorks = () => {
             Built around your existing rotation, machinery and agronomy.
           </p>
         </div>
-        <div className="process-steps">
-          {steps.map((step) => (
-            <div key={step.number} className="step">
-              <div className="step-number">{step.number}</div>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-          ))}
-        </div>
+        <CardCarousel className="steps-carousel">
+          {stepCards}
+        </CardCarousel>
       </div>
     </section>
   )
