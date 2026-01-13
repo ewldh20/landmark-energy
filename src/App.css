@@ -3,11 +3,21 @@
     position: relative;
     width: 100%;
     overflow-x: hidden;
+    /* No height constraint on mobile - allows natural content height for scrolling */
 }
 
 @media (min-width: 769px) {
     .app {
         min-height: 100vh;
+    }
+}
+
+/* Mobile: Ensure app doesn't constrain height */
+@media (max-width: 768px) {
+    .app {
+        height: auto;
+        min-height: auto;
+        max-height: none;
     }
 }
 

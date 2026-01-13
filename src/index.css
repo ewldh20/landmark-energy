@@ -19,10 +19,22 @@
     --error-color: #dc3545;
 }
 
-html, body {
+html {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
     height: auto;
     overflow-x: hidden;
     overflow-y: auto;
