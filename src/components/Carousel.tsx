@@ -53,7 +53,6 @@ const Carousel = ({ children, className = '' }: CarouselProps) => {
           className="carousel-track"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
-            width: `${children.length * 100}%`,
           }}
         >
           {children.map((child, index) => (

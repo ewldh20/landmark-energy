@@ -319,7 +319,6 @@
     display: flex;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
-    width: 100%;
 }
 
 .carousel-slide {
@@ -401,25 +400,26 @@
         width: 100%;
         margin-left: -20px;
         margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
         position: relative;
     }
 
     .carousel-container {
         width: 100%;
+        position: relative;
+        overflow: hidden;
     }
 
     .carousel-track {
-        width: 100%;
+        display: flex;
     }
 
     .carousel-slide {
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        flex-basis: 100% !important;
+        flex: 0 0 100% !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
     }
 
     /* Ensure cards don't overflow and fit properly */
@@ -427,10 +427,10 @@
     .carousel-slide .benefit-item,
     .carousel-slide .step,
     .carousel-slide .context-item {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        width: calc(100% - 40px) !important;
+        max-width: calc(100% - 40px) !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
         box-sizing: border-box;
     }
 
