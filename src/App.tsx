@@ -6,6 +6,7 @@ import IndustryContext from './components/IndustryContext'
 import HowItWorks from './components/HowItWorks'
 import Benefits from './components/Benefits'
 import ContactModal from './components/ContactModal'
+import AgentDisclaimer from './components/AgentDisclaimer'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -24,6 +25,7 @@ function App() {
       <HowItWorks />
       <Benefits />
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
+      <AgentDisclaimer />
       <Footer />
     </div>
   )

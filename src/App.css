@@ -655,6 +655,23 @@
     cursor: not-allowed;
 }
 
+/* Agent Disclaimer */
+.agent-disclaimer {
+    background-color: var(--bg-light);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.disclaimer-text {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary-dark);
@@ -683,6 +700,15 @@
 
     .section:first-of-type {
         padding-top: 6rem;
+    }
+
+    .agent-disclaimer {
+        padding: 1.5rem 0;
+    }
+
+    .disclaimer-text {
+        font-size: 0.9rem;
+        padding: 0 1rem;
     }
 
     .nav-logo {
