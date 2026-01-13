@@ -1,22 +1,22 @@
-import CardCarousel from './CardCarousel'
+import Carousel from './Carousel'
 
 const IndustryContext = () => {
-  const contextCards = [
-    <div className="context-item">
+  const cards = [
+    <div key="1" className="context-item">
       <h3>Net Zero by 2050</h3>
       <p>
         The UK is committed to net zero by 2050. Transport accounts for a quarter of UK emissions, 
         so we need clean fuel alternatives to oil and diesel.
       </p>
     </div>,
-    <div className="context-item">
+    <div key="2" className="context-item">
       <h3>High Demand, Limited Supply</h3>
       <p>
         UK fuel producers need sustainable crop feedstocks to make clean fuels, but supply is limited. 
         This creates strong demand for your cover and break crops.
       </p>
     </div>,
-    <div className="context-item">
+    <div key="3" className="context-item">
       <h3>Government Subsidies</h3>
       <p>
         To encourage supply, the government subsidises certified clean-fuel feedstocks through credits. 
@@ -34,9 +34,16 @@ const IndustryContext = () => {
             UK government targets are driving demand for sustainable crop feedstocks.
           </p>
         </div>
-        <CardCarousel className="context-carousel">
-          {contextCards}
-        </CardCarousel>
+        <div className="context-grid">
+          {cards.map((card, index) => (
+            <div key={index}>{card}</div>
+          ))}
+        </div>
+        <div className="context-carousel">
+          <Carousel className="context-carousel-inner">
+            {cards}
+          </Carousel>
+        </div>
       </div>
     </section>
   )

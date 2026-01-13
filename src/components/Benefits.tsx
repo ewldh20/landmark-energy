@@ -1,4 +1,4 @@
-import CardCarousel from './CardCarousel'
+import Carousel from './Carousel'
 
 const Benefits = () => {
   const benefits = [
@@ -44,9 +44,16 @@ const Benefits = () => {
             Benefits designed specifically for UK farms and land managers.
           </p>
         </div>
-        <CardCarousel className="benefits-carousel">
-          {benefitCards}
-        </CardCarousel>
+        <div className="benefits-grid">
+          {benefitCards.map((card, index) => (
+            <div key={index}>{card}</div>
+          ))}
+        </div>
+        <div className="benefits-carousel">
+          <Carousel className="benefits-carousel-inner">
+            {benefitCards}
+          </Carousel>
+        </div>
       </div>
     </section>
   )

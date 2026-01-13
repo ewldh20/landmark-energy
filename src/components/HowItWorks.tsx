@@ -1,4 +1,4 @@
-import CardCarousel from './CardCarousel'
+import Carousel from './Carousel'
 
 const HowItWorks = () => {
   const steps = [
@@ -41,9 +41,16 @@ const HowItWorks = () => {
             Built around your existing rotation, machinery and agronomy.
           </p>
         </div>
-        <CardCarousel className="steps-carousel">
-          {stepCards}
-        </CardCarousel>
+        <div className="process-steps">
+          {stepCards.map((card, index) => (
+            <div key={index}>{card}</div>
+          ))}
+        </div>
+        <div className="process-carousel">
+          <Carousel className="process-carousel-inner">
+            {stepCards}
+          </Carousel>
+        </div>
       </div>
     </section>
   )

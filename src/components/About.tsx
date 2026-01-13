@@ -1,22 +1,22 @@
-import CardCarousel from './CardCarousel'
+import Carousel from './Carousel'
 
 const About = () => {
   const cards = [
-    <div className="about-card">
+    <div key="1" className="about-card">
       <div className="icon">🌾</div>
       <h3>Cover, break & stewardship crops</h3>
       <p>
         We use crops you already grow for black-grass control, rotation and SFI — rye, triticale, OSR, mixes and other cover.
       </p>
     </div>,
-    <div className="about-card">
+    <div key="2" className="about-card">
       <div className="icon">⚡</div>
       <h3>Clean-fuel buyers</h3>
       <p>
         Your crop is sold to UK fuel producers who need sustainable feedstock for clean fuels. We ensure your offtake is compliant, making it eligible for additional government subsidy income.
       </p>
     </div>,
-    <div className="about-card">
+    <div key="3" className="about-card">
       <div className="icon">💰</div>
       <h3>Additional Income</h3>
       <p>
@@ -34,9 +34,16 @@ const About = () => {
             We source better-paying markets for crops you're already growing — turning break, cover and stewardship crops into additional revenue through clean-fuel buyers and government subsidies.
           </p>
         </div>
-        <CardCarousel className="about-carousel">
-          {cards}
-        </CardCarousel>
+        <div className="about-grid">
+          {cards.map((card, index) => (
+            <div key={index}>{card}</div>
+          ))}
+        </div>
+        <div className="about-carousel">
+          <Carousel className="about-carousel-inner">
+            {cards}
+          </Carousel>
+        </div>
       </div>
     </section>
   )
