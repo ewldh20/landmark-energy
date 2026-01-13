@@ -42,8 +42,14 @@ html {
 }
 
 #root {
-    min-height: 100vh;
     position: relative;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    #root {
+        min-height: 100vh;
+    }
 }
 
 .container {

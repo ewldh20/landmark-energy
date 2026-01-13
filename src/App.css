@@ -1,9 +1,14 @@
 /* App Container */
 .app {
-    min-height: 100vh;
     position: relative;
     width: 100%;
     overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+    .app {
+        min-height: 100vh;
+    }
 }
 
 /* Navigation */
