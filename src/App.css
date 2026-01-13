@@ -407,9 +407,25 @@
     /* Ensure carousel takes full width on mobile */
     .carousel-wrapper {
         width: 100%;
-        margin-left: -20px;
-        margin-right: -20px;
+        margin: 0;
         position: relative;
+    }
+
+    .carousel-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-track {
+        display: flex;
+    }
+
+    .carousel-slide {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
     }
 
     .carousel-container {
