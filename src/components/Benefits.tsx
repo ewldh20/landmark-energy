@@ -8,19 +8,11 @@ const Benefits = () => {
     },
     {
       title: 'Premium clean-fuel markets',
-      description: 'Your crop is sold into UK clean-fuel markets with government premiums, typically higher value than feed or plough-in.'
-    },
-    {
-      title: 'No soil penalty',
-      description: 'Roots and stubble stay in the ground — SFI and soil benefits remain.'
+      description: 'Your crop is sold into UK clean-fuel markets with government premiums, typically higher value than feed or plough-in. Roots and stubble stay in the ground — SFI and soil benefits remain.'
     },
     {
       title: 'We handle the paperwork',
       description: 'We handle government premiums, contracts and buyers. You just grow and harvest.'
-    },
-    {
-      title: 'Start small, scale up',
-      description: 'Trial a few fields, then expand if it works for you.'
     }
   ]
 
