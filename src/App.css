@@ -398,9 +398,13 @@
 
     /* Ensure carousel takes full width on mobile */
     .carousel-wrapper {
-        width: calc(100% + 40px); /* Account for container padding */
+        width: 100%;
         margin-left: -20px;
         margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        position: relative;
     }
 
     .carousel-container {
@@ -418,15 +422,36 @@
         flex-basis: 100% !important;
     }
 
-    /* Ensure cards don't overflow */
+    /* Ensure cards don't overflow and fit properly */
     .carousel-slide .about-card,
     .carousel-slide .benefit-item,
     .carousel-slide .step,
     .carousel-slide .context-item {
         width: 100% !important;
         max-width: 100% !important;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Ensure dots are visible and properly positioned */
+    .carousel-dots {
+        padding: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        min-width: 12px;
     }
 }
 
