@@ -305,6 +305,7 @@
     width: 100%;
     position: relative;
     margin-top: 3rem;
+    overflow: hidden;
 }
 
 .carousel-container {
@@ -318,11 +319,15 @@
     display: flex;
     transition: transform 0.3s ease-in-out;
     will-change: transform;
+    width: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
+    max-width: 100%;
+    width: 100%;
     flex-shrink: 0;
+    flex-grow: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
@@ -335,8 +340,10 @@
 .carousel-slide .step,
 .carousel-slide .context-item {
     width: 100%;
+    max-width: 100%;
     margin: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 
 /* Carousel step needs margin for number */
@@ -387,6 +394,39 @@
     .process-carousel,
     .context-carousel {
         display: block;
+    }
+
+    /* Ensure carousel takes full width on mobile */
+    .carousel-wrapper {
+        width: calc(100% + 40px); /* Account for container padding */
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-track {
+        width: 100%;
+    }
+
+    .carousel-slide {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex-basis: 100% !important;
+    }
+
+    /* Ensure cards don't overflow */
+    .carousel-slide .about-card,
+    .carousel-slide .benefit-item,
+    .carousel-slide .step,
+    .carousel-slide .context-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
