@@ -7,16 +7,12 @@ const Benefits = () => {
       description: 'We only use crops you\'re already growing for compliance, cover or breaks.'
     },
     {
-      title: 'Market-linked clean-fuel pricing',
-      description: 'Your crop is sold into the clean-fuel market — typically higher value than feed or plough-in.'
+      title: 'Premium clean-fuel markets',
+      description: 'Your crop is sold into UK clean-fuel markets with government premiums, typically higher value than feed or plough-in.'
     },
     {
       title: 'No soil penalty',
       description: 'Roots and stubble stay in the ground — SFI and soil benefits remain.'
-    },
-    {
-      title: 'Premium clean-fuel markets',
-      description: 'Your crop is sold into UK clean-fuel markets, where government premiums make it worth more than feed or plough-in.'
     },
     {
       title: 'We handle the paperwork',

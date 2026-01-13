@@ -10,7 +10,7 @@ const HowItWorks = () => {
     {
       number: 2,
       title: 'You harvest as normal',
-      description: 'You cut it as a whole-crop. Roots and stubble stay in the ground. We arrange haulage.'
+      description: 'You cut it as a whole-crop. Roots and stubble stay in the ground.'
     },
     {
       number: 3,
