@@ -34,12 +34,15 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'hidden' // Prevent background scrolling
+      // Only prevent body scroll on desktop, allow modal to scroll on mobile
+      if (window.innerWidth > 768) {
+        document.body.style.overflow = 'hidden'
+      }
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
     }
   }, [isOpen, onClose])
 

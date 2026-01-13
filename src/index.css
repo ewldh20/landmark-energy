@@ -28,12 +28,16 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100vh;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
 }
 
 .container {
