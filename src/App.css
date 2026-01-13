@@ -2,6 +2,8 @@
 .app {
     min-height: 100vh;
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -52,6 +54,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .hero-background {
@@ -318,7 +321,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    touch-action: pan-y;
+    touch-action: pan-x;
 }
 
 .carousel-track {
