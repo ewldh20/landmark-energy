@@ -1,3 +1,9 @@
+/* App Container */
+.app {
+    min-height: 100vh;
+    position: relative;
+}
+
 /* Navigation */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
@@ -636,6 +642,9 @@
     color: white;
     padding: 2rem 0;
     text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
 }
 
 .footer a {
