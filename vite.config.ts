@@ -14,4 +14,8 @@ export default defineConfig({
       },
     },
   },
+  define: {
+    // Make env vars available in HTML
+    'import.meta.env.VITE_GA_ID': JSON.stringify(process.env.VITE_GA_ID || ''),
+  },
 })
